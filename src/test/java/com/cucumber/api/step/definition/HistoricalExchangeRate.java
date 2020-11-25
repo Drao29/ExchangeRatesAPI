@@ -13,14 +13,14 @@ public class HistoricalExchangeRate {
 	HistoricalExchnageRateImplementation HistoricalExchnageRate;
 	
 	//Execute historical exchange rate api with valid URL
-	@Given(" Given I want to execute Rates API for historical Foreign Exchange rates")
+	@Given("^I want to execute Rates API for historical Foreign Exchange rates$")
 	public void historical_Exchange_rates()
 	{
 		Log.info("Execute historical exchange rate API");
 		
 	}
     
-	@When("I submit the GET API request")
+	@When("^I submit the GET API request$")
 	public void submit_the_GET_API_request()
 	{
 		HistoricalExchnageRate.historical_exchange_rate();
@@ -40,13 +40,13 @@ public class HistoricalExchangeRate {
 	
 	//Execute historical exchange rate api with invalid URL
 	
-	@Given(" I want to execute historical Foreign Exchange rates API with invalid data")
+	@Given("^I want to execute historical Foreign Exchange rates API with invalid data$")
 	public void execute_historical_Foreign_Exchange_rates_API_with_invalid_data()
 	{
 		 Log.info("historical Foreign Exchange rates API with invalid data");	
 	}
 	
-	@Then("I submit the GET request for invalid URL")
+	@Then("^I submit the GET request for invalid URL$")
 	public void GET_request_for_invalid_URL()
 	{
 		//hit GET request with invalid request URL

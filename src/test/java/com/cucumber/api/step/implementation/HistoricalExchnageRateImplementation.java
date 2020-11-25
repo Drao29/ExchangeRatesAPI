@@ -14,7 +14,7 @@ public class HistoricalExchnageRateImplementation {
 		public void historical_exchange_rate()
 		{
 			 RestAssured.baseURI=url.getbaseURL();
-			 validateresponse=RestAssured.given().log().all().when().log().all().get("/2020-11-25").then().log().all();
+			 validateresponse=RestAssured.given().log().all().when().log().all().get("/2020-11-25").then().log().all().assertThat().statusCode(200);
 			
 		}
 
@@ -22,7 +22,7 @@ public class HistoricalExchnageRateImplementation {
 		public void historical_exchange_rate_invalidURL()
 		{
 			 RestAssured.baseURI=url.getbaseURL();
-			 validateresponse=RestAssured.given().log().all().when().log().all().get("/2020-11-25").then().log().all();
+			 validateresponse=RestAssured.given().log().all().when().log().all().get("/2020-11-25").then().log().all().assertThat().statusCode(400);
 			
 		}
 }

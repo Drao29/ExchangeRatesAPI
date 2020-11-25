@@ -26,9 +26,9 @@ public class CurrentExchangeRate {
 	 TestBase url=new TestBase();
 	 CurrentExchangeRateImplementation currectexrate;
 	
-	 @Given("I want to execute Rates API for Latest Foreign Exchange rates")
+	@Given("^I want to execute Rates API for Latest Foreign Exchange rates$")
 	 public void i_want_to_execute_rates_api_for_latest_foreign_exchange_rates() {
-		 Log.info("Execute latest exchnage rate API");
+		 System.out.println("Execute latest exchange rate API----");
 	    
 	 }
  
@@ -53,13 +53,13 @@ public class CurrentExchangeRate {
 	
 	//validate api response with invalid data
 	
-	@Given(" I want to execute Rates API for Latest Foreign Exchange rates with invalid data")
+	@Given("^I want to execute Rates API for Latest Foreign Exchange rates with invalid data$")
 	public void execute_Rates_API_with_invalid_data()
 	{
-		 Log.info("Execute latest exchnage rate API with invalid data");	
+		 System.out.println("Execute latest exchange rate API with invalid data----");	
 	}
 	
-	@Then("I submit the GET request with invalid data")
+	@Then("^I submit the GET request with invalid data$")
 	public void GET_request_with_invalid_data()
 	{
 		//hit GET request with invalid request URL
